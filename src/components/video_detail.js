@@ -17,7 +17,7 @@ const VideoDetail = ({video}) => {
 			</div>
 			<div className="details">
 				<div>{video.snippet.title}</div>
-				<div>{video.snippet.publishedAt}</div>
+				<div>{video.snippet.publishedAt.slice(0, 10)}</div>
 				<div>{video.snippet.description}</div>
 				</div>
 		</div>

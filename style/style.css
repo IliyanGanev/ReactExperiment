@@ -29,3 +29,11 @@
 #body {
     background-color: black;
 }
+
+.logo {
+	color: white;
+}
+
+.mark {
+	border-radius: 20px;
+}
