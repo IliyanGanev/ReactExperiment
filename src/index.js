@@ -15,13 +15,16 @@ class App extends Component {
 		this.state = { 
 			videos:[],
 			selectedVideo: null
+
 		};
 		 
-		this.videoSearch('surfboards');
+		this.videoSearch('snowboard videos');
 	}
 
 	videoSearch(term) {
+
 		YTSearch({key: API_KEY, term: term}, (videos) => {
+			console.log({videos})
 	 		this.setState({ 
 	 			videos: videos,
 	 			selectedVideo: videos[0]
@@ -29,7 +32,9 @@ class App extends Component {
 		});
 	} 
 
+
 	render() {
+
 		const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
 
 		return (
